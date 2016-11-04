@@ -1,0 +1,550 @@
+%  sample input file for using the CSLI.cls LaTeX class
+
+%  next 2 lines pull in the CSLI.cls file, put options between []
+\documentclass[nocover]            % options: coveronly, nocover
+{CSLI}                       %   plus standard article class options
+
+
+\usepackage[
+bookmarks=true,
+bookmarksnumbered=false,  % true means bookmarks in
+% left window are numbered
+bookmarksopen=false,      % true means only level 1
+% are displayed.
+]{hyperref}
+
+\usepackage{multirow}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+
+\graphicspath{ {images/} }
+
+
+
+%list separation
+\setlist{nolistsep}
+\setlist{noitemsep}
+
+\abstract{CySat, the CubeSat program at Iowa State University, is seeking a review of the technical feasibility of the CySat I mission. The review is for the purpose of applying to NASA's CubeSat Launch Initiative. This review will address the feasibility, resiliency, and risk of mission and satellite design through a technical discussion of the project. }   % suggested 200 words
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\newpage
+
+\tableofcontents
+
+\pdfbookmark[2]{Contents}{table}
+
+
+\newpage
+\section{Introduction}
+CySat is designing a nanosatellite platform in accordance with the CubeSat standard set forth by California Polytechnic University and Stanford University. The CubeSat program offers educational institutions, like Iowa State University, the opportunity to design a space worthy satellite for a relatively low cost. The primary educational objective of CySat is the establishment of a small satellite program at Iowa State University that allows students the opportunity to apply their knowledge and coursework to a real astronautics project. CySat pulls students from a number of the Engineering Departments to foster an interdisciplinary environment within the College of Engineering and accomplish complex missions requiring multiple areas of expertise. Students have the opportunity to design a system and mission for a small satellite from concept to flight. CySat teaches it's members how to function within a multidisciplinary engineering team and gives them access to established industry and NASA contacts.  CySat provides a unique educational experience which helps prepare students for working in the space industry.
+\subsection{Project Overview}
+CySat falls under the umbrella of Iowa State's College of Engineering Make to Innovate organization (M:2:I). M:2:I is devoted to giving students the opportunity to submit proposals for engineering projects and supplying resources to help students independently fulfill those goals. CySat is an ongoing Make to Innovate project that has a strong history of support and backing from the department. CySat adheres to M:2:I's goals of providing further hands on educational experience for undergraduates outside of classes.\\
+CySat is provided a faculty academic advisor by M:2:I and has acquired the assistance of three technical advisors, one at NASA's Johnson Space Center and two at Boeing. CySat is student run and composed of six individual teams that each focus on a specific subsystem of the satellite. CySat has developed this project structure to increase the efficiency of the teams design process and provide it's members with an authentic representation of space missions in industry.
+
+\subsubsection{Project Goals}
+The overall goals for CySat have been the driving force behind all design considerations and operational plans. The following were developed jointly between CySat and the team's academic advisors. 
+\begin{enumerate}
+\item Serve as a catalyst for the small satellite program at Iowa State University
+\item Develop a baseline, modular design for future CubeSat missions
+\item Demonstrate the functionality of CubeSat's for asteroid surveying 
+\end{enumerate}
+
+\subsection{Mission Objectives}
+CySat's current primary scientific objective is to demonstrate that CubeSats can be used as effective tools for the asteroid mining industry. CySat is developing a payload for asteroid surveying. CySat's first mission, CySat I, will be a proof-of-concept flown in Low Earth Orbit (LEO). CySat I will demonstrate the state-of-the-art communications and radar payload, the functionality of the satellite platform, and CySat's operational readiness. CySat I's payload will map the target's density and collect absorption spectrum's to determine the target's composition. CySat's CubeSat platform has been designed to be adaptable for different payload configurations, this will allow CySat to repurpose the platform for future missions.
+
+\section{Design Factors}
+Because of the recent surge in private industry support for CubeSats, CySat has been able to capitalize on recent commercial off-the-shelf (COTS) components to minimize design time and risk. The design team focused on COTS components due to several factors: flight heritage, short development time, and out of box functionality. Key components will be purchased commercially to decrease risk while some electronics will be developed in-house to increase efficiency. This system has allowed CySat to develop complex mission specific components in-house due to the increased flexibility of the commercial systems.
+\subsection{Satellite Component Evaluation Criteria}
+\textbf{Mass:} Pursuant to CubeSat specifications, special considerations were made to select and design components that would keep the system under the 4.0 Kg mass requirement.\\ 
+\\\textbf{Volume:} Ensuring that components would not consume too much of the 10 x 10 x 30 cm cube, and building in allowances for a diverse range of mission specific payloads. \\
+\\\textbf{Cost:} Due to the current fiscal situations of most state funded institutions, some high dollar amount components were fabricated in house. \\
+\\\textbf{Flight Heritage:} Knowing that components had successfully worked in the space environment was of great importance. This can be seen with the selection of COTS components.\\ 
+\subsection{Design Restrictions}
+The CubeSat team developed several design restrictions to guide and optimize the design early on. Since the payload will require substantial resources from the spacecraft, the design goal was to provide a robust platform with enough features to allow the spacecraft to operate beyond LEO. This strategy has produced satellite platform which can be easily adapted for future collaborations with small businesses and other universities. 
+\begin{enumerate}
+\item The spacecraft shall conform to the 3U CubeSat standard
+\item Spacecraft subsystems should be as simplistic as possible to reduce failure points 
+\item Non-deployable solar arrays will be manufactured in house due to design needs and cost restrictions 
+\item COTS components will be used when possible to limit risk. Custom, mission optimized, electronics will be designed to increase efficiency
+\end{enumerate}
+
+\newpage
+\section{Satellite Systems}
+\subsection{Structural Systems}
+\subsubsection{CubeSat Structure}
+The CySat team determined early on that developing a custom structure would be the most suitable option for the mission. This platform could address many of the design challenges of this mission. The largest design challenge that had to be addressed was accommodation of the payload into the satellite. Previous iterations of the design utilized a commercially available 3U Pumpkin Kit, but the team has determined that a custom configuration will be more effective to accomplish the mission.\\
+\indent This configuration will be designed to meet the structural standards set out by the CubeSat guidelines from California Polytechnic State University. The structure will be made mostly aluminum alloy that will be CNC milled to the required dimensions. Solar panels will be placed on the outside of the structure with all internal hardware placed inside of the structure separated by rods, spacers, and standoffs. The top panel will also be placed at a to be determined angle inward less than 45 degrees in order to meet the requirements of the payload. This is done in order to create more useable area to capture a return signal off of the payload. All of this information is preliminary design and is subject to change depending on payload requirements.
+ 
+\paragraph{Solar Arrays\\}
+The solar arrays will act as a mounting point and substrate for the photovoltaic cells and communications antennas. Consisting of six hard mounted panels and four deployable panels, the array will be configured to ensure optimal power delivery and minimal interference between the antenna system and P-POD. A Clyde Space deployable array will be used to increase exposed solar cell area and generate power for the payload and stabilizations systems. Two options exist for Clyde Space deployable arrays: Single, Short Edge; and Double, Long Edge. Both options are still being considered.
+
+CySat has selected a hybrid solar cell arrangement due to the need for flexible placement and size restrictions on two of the faces. Specific areas were established during the design phase of the mission to ensure that enough solar cells could be placed in appropriate locations to ensure the correct calculated power generation for the mission. Most of the solar arrays will be placed on the zenith side of the satellite since that will be the sun facing side for the majority of the mission. The top and bottom of the satellite are reserved for transmission to be used by the payload team.  
+
+\begin{figure}[H]
+
+    \includegraphics[width=\textwidth]{Layout}
+    \caption{Solar panel layout}
+\end{figure}
+
+\paragraph{Antenna Mounting and Deployment\\}
+Wrapping of the antenna elements will not interfere with the rails of the P-POD or the diagnostics. This mounting will be secured to the solar array using bolts that will also keep the antennas from moving side to side. The mountings will also add a 15$^\circ$ takeoff angle to the center mounted UHF transmission elements to form a bent dipole. The antennas will then be wrapped around the satellite and held in place with ultra-high-molecular-weight polyethylene (also known as Spectra) fishing wire tied around a nichrome filament until deployment. The antennas will be mounted on the bottom panel of the satellite, and the antennas will be wrapped up toward the top of the satellite with the burner circuits on the front and back panel. A diagram of this system can be seen in Figure 1. 
+ 
+The burner circuit will consist of a constant current source supplying approximately 0.5 amps to a 1 cm length of nichrome filament. This filament will have the spectra wire wrapped around it, causing the antenna to break away once the nichrome has reached the melting point of the spectra wire. This configuration has been successfully fabricated and tested on hardware before with successful deployment of the antenna system.
+ 
+\subsection{Electrical Systems}
+\subsubsection{Power Systems}
+Due to cost and design constraints on the power supply system it was decided that the power board would be purchased, and the solar array built in house. Building the solar array in house has provided a number of advantages including flexibility in solar cell selection and placement, as well as flexibility in antenna position and mounting.
+
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.75\textwidth]{PWR_1}
+    \caption{Clyde Space Electronic Power System (EPS) \cite{Clyde Space}.}
+\end{figure}
+
+The power board selected was a Clyde Space CS 3U Power Bundle EPS with 10 watt-hour integrated batteries. Options for battery integration are 3 or 4 integrated 10 watt-hour batteries. Depending on final estimations of power draw from communications, payload, and stabilization, a final decision as to number of batteries will be made. This power system should meet power needs for normal operations. The power system also includes a Maximum Power Point Tracking interface with the solar panels, allowing the optimal transfer of energy to the batteries. In addition, detailed telemetry provided via application program interface and low lead time helped make this board the best fit for CySat \cite{Clyde Space}.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{PWR_2}
+\caption{SpectroLab CIC Solar Cell \cite{Spectrolab}.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{PWR_3}
+\caption{TrisolX T01 Solar Wings \cite{TrisolX}.}
+\end{subfigure}
+\caption{CySat I solar cell variants.}
+\end{figure}
+
+
+
+
+
+The Spectrolab CIC photovoltaic cells selected for this spacecraft have been flight tested on numerous other CubeSat missions and have been incorporated into several commercially available arrays. The CIC cells have been widely available to the CubeSat community for several years and detailed documentation on their integration and space performance has been published. The TrisolX solar wings deliver high maximum power, high voltage at maximum power, and high efficiency values. Utilizing both the CIC and TrisolX cells in a hybrid solar array has allowed Cysat to be flexible in the placement of the antennas and diagnostic ports.
+
+
+
+The integration of the solar array includes two different methods of attaching the solar cells. The TrisolX cells will be attached using solder paste. This paste will be warmed on a hot plate to insure an even spread underneath. CySat Power Team has already fabricated several mock-up boards to ensure the efficacy of this fabrication procedure. After the TrisolX cells have been attached to the substrate, they will be encapsulated to ensure integrity and maximum efficiency. The CIC integration has yet to be tested. Because of the greater weight of the CICs, a double-sided adhesive will be used, initially, to attach the cells followed by soldered electrical connections.
+
+\subsubsection{Stabilization}
+CySat has explored several methods of stabilization and has focused its attention towards stabilization using electro-permanent magnets (EP) and reaction wheels. Due to the power hungry nature of stabilization in CubeSats, it is of the utmost benefit to use methods that derive stability from the Earth's magnetic field when possible. Additionally, CySat will continue to expand on stabilization via reaction wheels. CySat ideally will use both EP magnets as a proof of concept, and reaction wheels as validation for future missions. The benefits and drawbacks of each technique are as follows:
+\paragraph{Passive Stabilization using Electro-Permanent Magnets\\}
+The major benefits of EP magnets include relatively low power draw in conjunction with the retaining its magnetically binary properties. Micro-scale EP magnets have been used in theory and practice in labs globally for decades, as well as in the hobby community- consequently, there are an abundance of fabrication techniques available to CySat . Several electro-permanent magnets are to be placed along the orthogonal planes of the CubeSat- operating in conjunction with each other, the magnets will generate the moments necessary to align the satellite with the Earth's magnetic field while fitting within CySat's power budget constraints. EP magnets, in the context of CubeSats, is a fairly novel method of stabilization. CySat seeks to be the trailblazer to optimize and implement the technique, making EP magnets a staple method of stabilization for future CubeSat programs when magnetic fields are available.
+
+EP magnets run on very little power due to the nature of their operation. They combine the best of both electromagnets and permanent magnets. A permanent magnet requires no power and will passively stabilize the satellite. However, there have been problems in the past of CubeSats sticking together upon release \cite{Knaian}. Electromagnets are a way of only stabilizing when needed by running current through them, but they draw a large amount of power. EP magnets have the ability to be switched on like electromagnets, but once they are switched on, they require no further power, similar to a permanent magnet. In general, this is done by using two different types of permanent magnet materials with very similar remnant magnetization values, but varying coercivities. One example CySat found \cite{Gilpin} used NdFeB and AlNiCo rods. They have similar remnant magnetization values, but it takes much less magnetic force to switch the polarity of the AlNiCo magnet as opposed to the NdFeB magnet. This means that a small current could be run through the AlNiCo magnet in one direction to switch the polarization, or current could be run in the reverse direction to switch the polarity back. The NdFeB magnet stays unchanged, but based on the polarity of the AlNiCo magnet, magnetic flux either flows through both or is entirely stopped. Once the polarity is switched, the magnets require no further power \cite{Gilpin}. This idea is what enables EP magnets to be very useful in CubeSat applications, where strict power budgets propose a limit to stabilization methods.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.75\textwidth]{Prop_1}
+    \caption{B/H plot: magnetic flux vs field intensity \cite{Gilpin}.}
+\end{figure}
+
+The figure above is an example of a B/H plot (magnetic flux and field intensity). When current is run through in the positive direction it switches the polarity and drives the magnets to point a. When the current stops it relaxes to point b and requires no further current. The same is for the negative direction with current driving it to point c, then relaxing to point d, where the magnet is off.
+
+These magnets are quickly increasing in availability and use, and CySat believes that some form of EP magnet could easily be adapted to a cube satellite application. EP magnets are quickly emerging in the small drone and UAV market for uses such as cargo clamping. These commercial examples use negligible power during steady state, and use power in the range of 0.6 to 1 A for less than a second during switch cycles.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.75\textwidth]{Prop_2}
+    \caption{Commercial EP magnet for use in drones and UAV's. This specific magnet requires 600mA for .3s while switching on or off \cite{NicaDrone}.}
+\end{figure}
+
+The major downside to EP magnets is that, as a stabilization technique, they only work in the presence of a strong magnetic field. For a low Earth mission, this is no problem, but CySat has goals of producing satellites for further exploratory missions. New forms of stabilization will need to be used on such missions, so it is important to start exploring those options now.
+\paragraph{Active Stabilization Using Reaction Wheels\\}
+Unlike magnets, reaction wheels (or momentum wheels) have the ability to point the satellite to a specific direction. Passive magnetic systems can only orient the satellite in the direction in which the earth's magnetic field and the magnet's field align. Reaction wheels on the other hand can stabilize the satellite's attitude to point at a specific direction, sometimes up to a thousandth of a degree depending on reaction wheel model. This attitude control may be a necessity for some communications as well as for some primary mission functions such as angling cameras or other tools. 
+
+Reaction wheels however are much more complex than magnetic stabilization. In order to remain at a specific attitude, reaction wheels must store the excess torque generated. In order to store this torque, the wheels must continually spin, and as a result, consume (relatively) large amounts of power. Reaction wheels also tend to fail due to their continually running nature. As a result, more than three reaction wheels (one on each axis) must be needed for redundancy. Otherwise, failure in a single axis direction can mean failure of the mission. Due to this risk, there is a tendency for spacecraft designers to add four or more reaction wheels at a tilt, so each reaction wheel controls two axes of attitude. That way if there is a failure of a reaction wheel, the mission can still continue on. 
+
+Reaction wheels are growing in the field of nanosatellites and are becoming increasingly more available as technology grows. CySat believes that integrating reaction wheels into the CySat I platform is not only feasible, but will benefit the implementation of reaction wheels on future missions when they are essential for successful. One of the leaders in reaction wheels for nanosatellites was Sinclair-SFL who created some of the first reaction wheels in 2007. These successful systems are a good baseline for the technology that could go on a CySat cube satellite. The following figure is from one of Sinclair's papers. 
+
+\begin{table}[H]
+\centering
+\caption{Example CubeSat Reaction Wheel Specifications \cite{Sinclair}}
+\begin{tabular}{| l | l |}
+\arrayrulecolor{white}
+\hline
+\rowcolor{gray!80}
+\textcolor{white}{\textbf{Parameter}} & \textcolor{white}{\textbf{Specification}} \\ \hline
+\rowcolor{gray!10}
+Mass & 185 g \\ \hline
+\rowcolor{gray!5}
+Dimensions & 5 x 5 x 4 cm \\ \hline
+\rowcolor{gray!10}
+Power, Max Speed &  0.4 W \@ 30 mNm-sec \\ \hline
+\rowcolor{gray!5}
+Power, Nominal &  0.1 W \@ 10 mNm-sec \\ \hline
+\rowcolor{gray!10}
+Max Torque & 2 mNm \\ \hline
+\rowcolor{gray!5}
+Supply Voltage & +3.3 V to +6.0 V \\ \hline
+\rowcolor{gray!10}
+Command and Telemetry & Asynch serial 19.2 kbps\\ \hline
+\rowcolor{gray!5}
+Connector & 4-pin DF11 \\ \hline
+\rowcolor{gray!10}
+Temperature, Operational & -35$^\circ$C to +60$^\circ$C \\ \hline
+\rowcolor{gray!5}
+Temperature, Survival & -40$^\circ$C to +100$^\circ$C \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.75\textwidth]{Prop_4}
+    \caption{Example CubeSat reaction wheel with penny for scale \cite{Sinclair}.}
+\end{figure}
+
+This method of attitude control is optimized for low power consumption and long life spans in order to meet the requirements for nanosatellite space missions. This often involves custom made motors so that high inertias can be met while still maintaining a high lifetime. The Sinclair example uses a type of brushless DC motor flipped inside out. The reaction wheel motor uses large magnets on the outside at a larger radius, and the windings are located inside. The large area inside gives room for more poles which yields many benefits such as a reduction of radiated magnetic fields. Along with custom magnetic design, windings, and software, these reaction wheels are now custom designed specifically for cube satellite purposes. 
+
+Reaction wheels also have an additional benefit being able to work in orbital conditions which do not have a strong magnetic field. CySat is pursuing the idea of eventually performing a lunar or near Earth object (NEO) mission, which would not provide strong magnetic fields and as a result, magnetic stabilization will be impossible. Complex burns will also necessitate accurate attitude control, as a result reaction wheels, or some other active stabilization method must be used. CySat will gain operation experience using active stabilization through the CySat I mission, better preparing the team for future missions.
+
+\begin{figure}[H]
+\centering
+    \includegraphics{Prop_5}
+    \caption{Reaction Wheel Power Contour Plot \cite{Votel}.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+    \includegraphics{Prop_6}
+    \caption{Reaction Wheel Torque Diagram \cite{Votel}.}
+\end{figure}
+
+\paragraph{Stabilization Systems\\}
+The most beneficial strategy may be to combine the use of reaction wheels and switchable EP magnets, since the magnets can then de-saturate the momentum the reaction wheel is accumulating, and prevent the momentum wheel from spinning too fast. Another benefit is each magnet can only be pointed in the direction of the magnetic field, the reaction wheel can provide more precision and control of attitude. Of course having both means the addition of another subsystem as well as added mass, however the benefits of having both can mean extended mission lifetime, as well as attitude control redundancy. CySat believes that using EP magnets would be a valuable technology demonstrate in low Earth orbit, while having reaction wheels on as well will provide valuable experience for other missions beyond Earth's magnetic field.
+\subsubsection{Command and Data Handling}
+
+\paragraph{Hardware\\}
+CySat I will utilize a custom-designed solution for command and data handling (C\&DH). The system will be based on a STM32F4 32-bit ARM microcontroller (MCU). There will be an additional secondary watchdog microcontroller that will both reset the primary MCU in a latch-up condition, and which can re-flash the primary MCU in case of corruption. The primary MCU will also perform the same checks on the watchdog. Data storage will be handled by four one-megabit external ferromagnetic memory ICs. The lower half of each IC will be dedicated to radiation-resistant firmware backups, cryptographic keys, and various other sensitive data items. The upper half of each will be combined to form a large heap for data storage prior to downlink. This will form 512 KByte of main memory for CySat.\\
+\\The CySat C\&DH System will be comprised of two physical PCBs. These two PCBs will maintain compatibility with the common CubeSat Kit bus to allow COTS units to be used. The first board is the Flight Computer, it will contain core CySat C\&DH components. Specifically, the following components will be on the CySat Flight Computer:
+\begin{itemize}
+\item Primary MCU
+\item Watchdog MCU
+\item Main memory
+\item Electrical interlocks
+\item MCU support passives
+\end{itemize}
+The CySat motherboard will be designed to be reusable, rather than mission specific.\\
+\\The second board is the Auxiliary Board (Aux Board), whcich will host:
+\begin{itemize}
+\item Antenna deployment control circuitry
+\item Stabilization/attitude control circuitry
+\end{itemize}
+
+\paragraph{Software\\}
+The CySat C\&DH primary MCU software has been developed around FreeRTOS and the basic peripheral library for the STM32. This allows great flexibility while still providing the reliability of using an established operating system. A multi-threaded approach inspired by the resiliency of microkernels was taken for device drivers. The following tasks run in dedicated threads:
+
+\begin{itemize}
+\item UART communication with radio
+\item Command parsing and protocol layer
+\item Command handling, configuration, and response generation
+\item Main memory access
+\item Stabilization control
+\item Beacon
+\item Secondary payload
+\end{itemize}
+
+
+Notably, SPI and I2C are not handled by dedicated threads. Rather, each of these buses uses a mutex-protected DMA driver to allow a single thread to seize the bus and perform high-throughput data transfer while another thread is allowed to run. This allows for extremely efficient bulk data manipulation while maintaining a simple, synchronous interface for ease of programming.
+
+The flexibility of the STM32 standard peripheral library allows for advanced low-level access to the MCU, including a UART bootloader that can be used to perform an emergency re-flash of the MCU in case of radiation corruption. The Primary and Backup MCUs will be identical hardware running identical firmware to eliminate complexity from the system. The difference in functionality will be set by hardware GPIO configurations and detected at startup. Each MCU will monitor the other for a latch-up scenario and, if required, each is capable of resetting the other. Each MCU will also periodically request the other to perform a firmware validation and report checksums. If these checksums are not consistent, the requesting MCU will force the invalid one into reset and reprogram it with a firmware image from main memory. Two team members have experience with similar systems in home automation systems and military applications. The primary-watchdog configuration will provide resistance to radiation corruption. Though not a primary concern for this particular mission, it will be necessary for future missions. Because this is a platform demonstration mission, it is fitting to include this feature in the platform from the beginning.
+
+\subsubsection{Communications System}
+
+\paragraph{Radio Selection\\}
+For telemetry, command and control the Clyde Space CS-UVTRX- 01 was selected for simplicity as a COTS part with flight heritage as well as designed compatibility with the bus. This half duplex crossband VHF/VHF radio will enable the platform to act as an AMSAT (Amateur Radio Satellite) as well as minimizing equipment and expertise necessary for radio amateurs to track, receive, and decode beacon data. 
+\paragraph{Licensing and Frequency Coordination\\}
+The International Telecommunication Union (ITU) is the United Nations agency that oversees information and communications policies, and frequency allocations for amateur radio satellite communications ultimately fall under their purview. However, the International Amateur Radio Union (IARU) is the Sector Member of the ITU through which amateur radio satellite frequencies are coordinated. Once a launch date is scheduled, we will submit a proposal to the IARU stating the intent of the mission and desired frequency bands, whereupon we anticipate being assigned specific uplink and downlink frequencies. Frequency allocations for amateur satellite communications have been established in a range of frequency bands from the low end of the HF range well into the mm range. The objectives in selecting frequency bands for uplink and downlink are to minimize the technical requirements of the satellite and to maximize ease-of- use by ground personnel and amateur operators. With these goals in mind, we will request an uplink frequency in the VHF 2m band (144 - 146 MHz) and a downlink frequency in the UHF 70cm band (435 - 438 MHz). These two bands are desirable for their usability, since licensees may operate on either with only the lowest-level FCC-issued amateur radio license (i.e., Technician level) and equipment for operation on these bands is comparatively cheap and widely available. The 2m band was chosen for the uplink in part because this frequency allocation is narrower (2 MHz vs. 3 MHz in the 70cm band), and we anticipate needing less bandwidth for the uplink than the downlink given the nature of the information sent on each. In contrast, the 70cm band has several desirable characteristics for the downlink, such as the ability to use a smaller antenna for transmitting.
+
+\paragraph{Command and Control\\}
+
+The radio provides 1200 baud AFSK and 9600 baud GMSK and AX.25 framing for ease of use. The system will be responsive to published commands from amateurs to query satellite state. Leveraging the cryptographic peripheral of MCU, mission critical control messages will be authenticated via a HMAC (Hash-based Message Authentication Code) as per the satellite control exemption on cryptography use in amateur bands. The ground segment for CySat I will utilize the radio communications system already in place in Howe Hall at Iowa State University as a component of the M:2:I program. The system is already equipped with computer controlled beam antenna array capable of tracking and closing a link with CySat I. The control computers of the system are remotely accessible and capable of pass prediction, automated capture of beacon, telemetry, and housekeeping data, along with manual satellite operations. The software will be a lights out, hands off, distributed autonomous ground control system for the satellite. Architectural designs focus on utilizing a MVC (Model View Controller) model that leverages a database, such that scalability and maintainability are at the center of this design. With this design, Python applications will be completely modular such that the application is simply fed data from a source and pushes data to the database. Then, this will make it possible to loosely couple the system such that various fragments can be changed, updated, maintained, removed, or added without severely backlogging additional maintenance or re-formatting existing implementation to synchronize with the new functionality. The shared data layer will be represented as a database using mySQL Lite. OpenMCT will serve to create the views for the model, and display data visualizations for calculations.
+
+\paragraph{Antenna Properties\\}
+
+CySat I is equipped with a quarter-wave bent dipole for 70cm transmission and a half wave monopole for 2 m reception. These are deployed in orbit as described in the structures section. Since transmission antennas are more design restrictive, special care was given to the UHF downlink antenna to ensure not only an impedance-matched antenna, but also one that transmits in a near-isotropic radiation pattern to compensate for tumble during initial deployment. This antenna configuration could also be critical in the event of an attitude control failure.
+
+\subsection{Satellite Tracking Systems}
+The satellite ground station consists of all the necessary hardware and software to establish and maintain a bidirectional radio link with the spacecraft. The primary components of this system are uplink and downlink circularly polarized yagi-uda beam antennas, azimuth and elevation rotators, an off-the-shelf multimode amateur radio transceiver, and associated control and interface software. The control software propagates the spacecraft's orbital parameters from initial conditions obtained from the internet (NORAD, Celestrak, etc.) in order to predict the next communications window. During the communications window, the software automatically points the antennas at the spacecraft and performs Doppler compensation on the radio while carrying out the pre-scheduled uplink/downlink sequence (a manual command mode is also available).
+\subsection{Flight Operations}
+The satellite will begin its mission in a passive beacon mode. In this mode, the satellite will operate in a stable fashion, whether or not it is able to receive commands from the ground station. It will maintain a system status log in the core memory heap, and will rotate this log as appropriate to ensure that recent data is retained without overflowing the heap. The satellite will also produce a beacon during this time, which will be an unencrypted ASCII message containing minimal system status information (battery voltage, mission time, and any detected faults), and a welcome message for radio amateurs who receive the beacon. If bi-directional contact cannot be established, the beacon will at least be able to give confirmation that the satellite is partially functional.\\
+\\After launch the CySat team's primary focus will be to establish contact with the spacecraft. Upon receiving initial orbital data from NASA, the flight operations team will use the base station at Howe Hall to attempt to pick up a beacon from the satellite. This data will help the team identify any initial problems with the satellite and allow for amateur radio operators to help locate and track the satellite. Once contact has been established, a command will be sent to transition the satellite from beacon mode to diagnostics mode.\\
+\\In this mode, the satellite will gather high-frequency data samples from the EPS board and log the data to the core memory heap. This data can be downlinked and analyzed to characterize the satellite's orbit and health status. Once the flight operations team has determined that the satellite is in functioning condition and is satisfied with the initial diagnostics, another command will signal the transition to the main operating phase of the flight.\\
+\\In this phase of flight, all operating parameters of the satellite can be configured. Health and housekeeping data will be gathered, but at a much lower rate than in diagnostic mode. The payload routines will also be active, logging data received from the instruments. The payload availability can be adjusted and configured based on power consumption figures. Scientific and housekeeping data rates will also be configurable based on the power needs to both gather and downlink the data.\\ 
+\\During all phases of flight, the watchdog routines (latch-up and firmware corruption) will be active. If such an event occurs, it will be remediated by the unaffected processor, and the event will be logged to a separate, high-priority sector of the core memory. This event log will be reported as a fault, and downlinked at the beginning of any downlink session. Near the end of the expected mission lifetime, the ground control team may wish to perform an in-flight test of the watchdog routines. This will involve tests of latch-up, non-response to memory corruption query, or intentional firmware corruption events in the main MCU. These tests will only be performed near the end of the mission and after all primary objectives are completed, as failure would likely lead to loss of the satellite. 
+\subsection{Payload Systems}
+\subsubsection{Radar}
+The CySat I mission will fly the CySat Mapping Radar (CMR) Block I, a risk-reduction pathfinder build of the software radio architecture designed for the mapping and prospecting of asteroids and near-Earth objects. To accomplish this goal, the CMR is a synthetic aperture radar capable software defined radio for planetary radio imaging. The benefits of software defined radio (SDR) for this experimental platform such as the flexibility in application (utilization for comms as well as radio navigation and radar mapping in multiple RF bands), reduction in system complexity (over having separate radio instruments for each function), and ease of manufacture by the reduced component count were key in selecting this approach. The intrinsic reprogrammability of the system will enable the CySat Payload Development Team to undertake progressive radar experiments with the CMR Block I until the satellite reaches end-of-life, including missions developed during flight with data from initial check-out.\\
+\\The core of the CMR is a software defined radio with a similar architecture to those flown by The Aerospace Corporation and GomSpace. This design comprises primarily of three sections: the computational resources, the ADC/DAC RF front end, and the antenna array.\\
+\\The selected Xilinx Zynq chipset is frequently utilized by civil space-based SDR as it combines the programmable logic (PL) of a traditional FPGA for pipelining RF processing, but also contains a dual core ARM Cortex fixed logic (FL). This unifies the computational resources of the CMR and decreases system complexity over a more distributed design. While this creates a singular point of failure for the radar system, architectures with separated PL and FL suffer from the same poor survivability in the event of a failure of one of the subsystems, between this and the successful flight heritage of this chip the CySat Payload Development team has confidence in the value of system simplification by using this combined chipset over other studied topologies.\\
+\\The RF front-end for the CMR is under intense development, and currently the subject of mission capability definition, so while exact performance estimates are currently unavailable, overall feasibility has been extensively studied. A number of RF front ends from hobbyist SDRs and flight-proven space-grade instruments have been studied for performance in the ranges required for the communications and mapping functions necessary for future CySat Missions. Most COTS components target cell band usage such as the Lime Micro Transceiver IC, but wider band reference front-end designs are becoming increasingly common. Manufactures such as Analog-Devices and their wide-bandwidth AD9361 RF Transceiver IC currently being studied for performance characteristics in coordination with the CySat Power and Mission Analysis teams. The largest concern of the font-end design is currently power output and the resulting data resolution. This is a key trade-off and the current focus of the Payload Development team.\\
+\\Utilizing the -Z face of CySat I as the reception antenna, a 30 cm by 30 cm aperture is available for radar mapping. Rather than construct one RF element for the whole area, current designs call for the construction of an array of reception antenna, 10 cm square each. For the Block I CMR this primarily simplifies construction and all antenna feed-points will be combined internally under current RF front-end designs. Despite this, the design is in anticipation of future flights of the CMR utilizing a phased array for radar return reception as well as allowing for more complex allocation of antenna panels to verifying functionality of operating bands of the radio. An additional upshot for the Block I mission, different patches can be matched to anticipated operating modes for the pathfinding mission. This will allow for maximum flexibility in operations now and future missions can use data from the CySat I mission to source multi-band antennae that align with mission objectives.
+\subsubsection{Spectrometer}
+CySat I will also be flying the CySat Infrared Spectrometer Block I, which will consist of a COTS infrared spectrometer, the Argus 1000. The Argus 1000 is a miniature infrared spectrometer, designed for specifically for nanosatellites, with a proven flight heritage on multiple CubeSats. The Argus 1000 was developed by researchers at York University and is currently commercially available and is the primary option CySat is considering for the surveying payload. The Argus 1000 was flown on the CanX-2 CubeSat, a mission by UTIAS/SFL (University of Toronto, Institute for Aerospace Studies/Space Flight Laboratory), and was designed to collect atmospheric spectra. The Argus 1000 has also been flown successfully on SRMSAT of Sri Ramaswamy Memorial University in Chennai. SRMSATs primary mission was a demonstration of the satellite platform and secondary was the operation of the Argus 1000 spectrometer for monitoring greenhouse gasses in the atmosphere. Both of these missions will serve as models for CySat's implementation of the Argus 1000 as the CySat Infrared Spectrometer Block I. The Argus 1000's small form factor, will fit easily within the volume allocated for the payload. The CySat Infrared Spectrometer Block I will provide the necessary operational experience to develop a Block 2 Spectrometer that can reach the spectral ranges required to detect minerals, heavy metals, and water ice.
+
+\begin{table}[H]
+
+\caption{Specifications of the Argus 1000 Spectrometer \cite{Toth}}
+
+\begin{tabular}{|l|p{9.5cm}|}
+\arrayrulecolor{white}
+\hline
+\rowcolor{gray!80}
+\textcolor{white}{\textbf{Parameter}} & \textcolor{white}{\textbf{Specification}} \\ \hline
+\rowcolor{gray!10}
+Instrument type & Grating spectrometer \\ \hline
+\rowcolor{gray!5}
+Spectral range & 0.9-1.7 $\mu$m infrared range at approximately  6nm spectral resolution (enhanced detectors extend range to 2.5 $\mu$m) \\ \hline
+\rowcolor{gray!10}
+Configuration & Single aperture spectrometer \\ \hline
+\rowcolor{gray!5}
+FOV (Field of View) & 0.1$^\circ$ viewing angle around centered camera boresight with 15 mm foreoptics \\ \hline
+\rowcolor{gray!10}
+Instrument size & 40 mm x 45 mm x 80 mm (base x height x length)\\ \hline
+\rowcolor{gray!5}
+Instrument mass & 0.230 kg \\ \hline
+\rowcolor{gray!10}
+Detectors & 256 element InGaAs diode arrays with programmable peltier cooler for enhanced noise performance \\ \hline
+\rowcolor{gray!5}
+Gratings & 12 mm x 12 mm plane gratings, 200 to 600 g/mm\\ \hline
+\rowcolor{gray!10}
+Electronics & 8 bit microprocessor with 12 bit ADC, 3.6-4.2 V,  input rail 250-1000 mA\\ \hline
+\rowcolor{gray!5}
+Operational modes &
+\vspace{-0.75cm} 
+\begin{itemize}
+\item Continuous cycle, constant integration time
+\item Continuous cycle, adaptive exposure
+\item Single shot
+\vspace{-0.5cm} 
+\end{itemize}
+\\ \hline 
+\rowcolor{gray!10}
+Data delivery & Fixed length parity striped packets of single or co-added spectra with
+sequence number, temperature, array temperature and operating parameters\\ \hline
+\rowcolor{gray!5}
+Integration time & 100 $\mu$s to 8 s \\ \hline
+\rowcolor{gray!10}
+Calibration & Two-wavelength laser calibration and radiance calibration prior to flight \\ \hline
+\rowcolor{gray!5}
+Volatiles & Less than 0.1\% volatile internals by mass \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+\section{Orbital Trajectory Analysis}
+Since CySat I will be launched as an auxiliary payload of another mission, its orbit will be determined by the primary mission of that launch. It is most common for CubeSat's to be deployed from the ISS and follow its orbit. To understand how CySat I will behave, the Mission Analysis team has analyzed the orbital dynamics of CySat I in orbits similar to the ISS as well as a variety of other possible altitudes. A multitude of simulations were run to determine a range of orbital altitudes that would be feasible. To find the lower limit of orbital altitude, Mission Analysis used the most conservative atmospheric model and largest coefficient of drag. It was determined that the orbit cannot be below 250km for fear that CySat I would burn up in the atmosphere before receiving enough data. For the upper limit, Mission Analysis used the least conservative atmospheric model and smallest coefficient of drag. Calculations showed the max orbital altitude is 485km for anything farther than this will exceed the maximum allowed orbital lifetime of 25 years. After including some margin of error, it was determined that the safe range of orbital altitudes should be between 330-430km.
+\subsection{Orbit Considerations}
+Since CySat I's orbital characteristics cannot be fully specified prior to the final mission approval, Mission Analysis has listed some important considerations that may affect the mission. It is ideal for CySat to obtain an orientation that is able to maximize exposure time to the sun as well as radio access times with the ground station in Ames, Iowa. In addition, orbital degradation times must be considered as NASA regulations limit the satellites total lifetime to 25 years in orbit. Each factor must be optimized, if possible, to obtain the most ideal orbit and attitude.
+\subsubsection{Solar Exposure}
+An ideal orientation for maximization of solar exposure would allow the solar panels to face the sun for the majority of the satellite's lifetime. Since the satellite needs to maintain constant communication with radios on the ground, a relatively constant source of power is important to the CySat I mission. However, since the satellite is power positive and the solar cell placement optimized, the orientation is not vital for the orbital consideration of CySat I.
+\subsubsection{Radio Access Times}
+Placing the satellite in a position that optimizes access times with the ground station is critical to the current mission. Due to the nature of a LEO orbit, the duration of access times will change with each pass the satellite makes over the ground station. Current calculations indicate that a relatively small data transfer of 768 kilobytes per week will be needed to support the mission. This in turn indicates that the duration of access times will be minimal, creating a large safety net to account for the calculations between different passes. When modeling the orbit after that of the ISS, Mission Analysis was able to calculate access times which would allow maximum data transfer of up to 1.25 megabytes per week. 
+\subsubsection{Orbit Degradation} 
+CySat I needs a minimum of 2 months of operational life to obtain enough data to complete the mission. CubeSats, however, are given a maximum of 25 years of orbital life as mandated by NASA. Planning for a mission of up to 25 years requires anticipation of a wide variety of orbits. Therefore, the cross sectional area, coefficient of drag, and atmospheric model all play a major role in the calculations that determine the lifetime of the orbit.
+\subsection{Analysis Considerations}
+\subsubsection{Cross Sectional Area}
+When calculating orbital decay times for a LEO orbit, atmospheric drag cannot be neglected. Since the satellite is moving through a fluid, it is vital to use the correct cross sectional area. Due to CySat 1 having active stabilization, the satellite will be traveling with its forward facing surface perpendicular to its motion meaning that the vertical cross sectional area can be used for the decay calculations. Since CySat is working with a 3U CubeSat, the dimensions will be 30cm x 10cm x 10cm, resulting in a vertical cross sectional area of 0.01m$^2$.
+\subsubsection{Atmospheric Drag}
+To accurately determine the orbital decay time, the satellites coefficient of drag was estimated. Based on research of cubes, cylinders, and prior CubeSats, we identified a range of drag coefficients between 0.8 and 2.2. A coefficient of drag of 0.82 corresponds to a long cylinder whereas a coefficient of 1.15 represents a short cylinder. A value of 2.2 was obtained from measurements of a typical spacecraft. Upon consideration, it was decided to use the average between all three listed coefficients which was 1.39. STAR-CCM+ will be used to calculate a more accurate coefficient of drag based on CySat I's specific geometry.
+\subsubsection{Atmospheric Model}
+There are multiple atmospheric models available, so a list of orbit lifetimes based on each model was compiled for comparison. Using Systems Tool Kit, we compared predictions from the following models: Jacchia 1970 Lifetime, NRLMSISE 2000, Jacchia 1971, and 1976 Standard. After analysis, we chose to base the orbital degradation predictions on the 1976 Standard model, which was the most conservative.
+\subsection{Orbit Simulations}
+Mission Analysis performed multiple simulations in STK to find total orbital period as well as average communication times with the ground station in Ames, Iowa. In these simulations, different cross sectional areas, coefficients of drag, and atmospheric models were used as previously described. For the final analysis, a cross sectional area of 0.01m$^2$ and a coefficient of 1.39 were used. These parameters were compared against both the 1976 Standard and the NRLMSISE 2000 atmospheric models. The former model resulted in the shortest orbital periods across all calculations, while the latter resulted in the longest periods, giving a wide range of data to work with. These models were also tested at a number of different altitudes ranging from 250km to 485km.
+
+\begin{figure}[H]
+
+    \includegraphics[width=\textwidth]{MA_1}
+    \caption{Two Day ground path of the CySat I. The red represents the access window of Ames.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Access Times of CubeSat to Ames, IA using an elevation angle from 15$^\circ$ to 90$^\circ$}
+\begin{tabular}{| l | c | c |}
+\arrayrulecolor{white}
+\hline
+\rowcolor{gray!80}
+\textcolor{white}{\textbf{Global Statistics}} & \textcolor{white}{\textbf{Orbit}} & \textcolor{white}{\textbf{Access Time (sec)}} \\ \hline
+\rowcolor{gray!10}
+Min Duration & 451 & 11.204\\ \hline
+\rowcolor{gray!5}
+Max Duration & 760 &  321.196 \\ \hline
+\rowcolor{gray!10}
+Mean Duration & - & 222.960 \\ \hline
+\rowcolor{gray!5}
+Total Duration & - & 438339.526 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{MA_3}
+    \caption{Orbital Lifetime Expectancy Using the position of the ISS, the 1976 Standard Atmospheric Density Model, and a Cd of 1.39.}
+\end{figure}
+
+
+\subsubsection{Simulation Results}
+Based on the calculations from the aforementioned models, Mission Analysis has been able to determine a range of ideal orbital altitudes. These models take into account orbital degradation times and average communication times with the ground station. Each simulation performed allowed for multiple communication windows each day which offered tens of seconds to multiple minutes of communication between the ground station and CySat I, which is much more than needed for the current mission. Orbital decay time however, was a much more limiting factor for orbital altitudes. Using the 1970 Standard model, it was determined that an orbit at or below 250km would be too low, since this would yield an orbital lifetime of fewer than 72 days. Although it is possible to obtain useful data within this window, it would be much better to have a larger safety net of time. On the opposite end, when applying the NRLMSISE 2000 model at 485km, the orbital lifetime was determined to be approaching 25 years, the maximum orbital lifetime allowed by NASA. Again, it would be better to have more room for error and avoid approaching the maximum lifetime. As such, orbiting at an altitude of 330-430km would be ideal for this mission. This allows for ample time in orbit and more than enough communication time with the ground station, while avoiding any possibility of an early degradation or remaining in orbit for over 25 years. In addition, this is within the range of the average orbit of the ISS, which would increase the likelihood of CySat I to be launched as an auxiliary payload.
+\section{Risk Assessment}
+A number of design decisions were made to ensure that the team will be able to produce an operational satellite on a reasonable timescale and budget. To reduce development time and design risk, CySat will purchase many COTS components. The team has opted to design their own structure, side panels, motherboard, and auxiliary board. Major risks that CySat I has the likelihood to encounter on its mission, their impact, and their mitigation are available in the table below. 
+
+\begin{table}[H]
+\centering
+\caption{Risk Assessment \& Mitigation}
+\begin{tabular}{| p{0.375\textwidth} | p{0.125\textwidth} | p{0.125\textwidth} | p{0.375\textwidth}|}
+\arrayrulecolor{white}
+\hline
+\rowcolor{gray!80}
+\textcolor{white}{\textbf{Risk}} & \textcolor{white}{\textbf{Prospect}} & \textcolor{white}{\textbf{Impact}} & \textcolor{white}{\textbf{Mitigation}} \\ \hline
+\rowcolor{gray!10}
+Failure of antenna deployment causing break in communications & High & Fatal &The deployment system will undergo extensive testing and contain redundancies as backup \\ \hline
+\rowcolor{gray!5}
+Satellite tumble causes signal fading and prevents reliable downlink & Medium & High & Active and secondary passive stabilization systems, omni directional antenna\\ \hline
+\rowcolor{gray!10}
+Static charge buildup on surfaces causes damage to electronics and loss of satellite & Medium & Fatal & Protect all devices from static charge to prevent secondary damage \\ \hline
+\rowcolor{gray!5}
+Software malfunction causes an unrecoverable lock-up & Medium & Fatal & The watchdog system will guard against this possibility. Additionally, long-term testing will allow bugs to be detected prior to launch\\ \hline
+\rowcolor{gray!10}
+Timing/location uncertainty prevents acquisition of satellite with ground station for communications & Medium & Medium & Upload time over ground station; use NORAD location data and orbital parameters to compute location from time; can reset time each downlink window; only low accuracy required \\ \hline
+\rowcolor{gray!5}
+Deployment anomaly from PPOD preventing satellite operation & Low & Fatal & Structural kit has been designed and tested to ensure successful deployment \\ \hline
+\rowcolor{gray!10}
+Collision with other objects in orbit destroys the satellite & Medium & High & The use of permanent switchable magnets will allow for all magnetic stabilization systems to be turned off to avoid collision with other satellites\\ \hline
+\rowcolor{gray!5}
+Solar activity reduce signal quality and inhibit reliable communication & Low & Medium & While the CubeSat is in space, the sun will be experiencing a solar minimum\\ \hline
+\rowcolor{gray!10}
+Lack of students to complete CySat build/test result in mission abandonment & Low & Medium & Many aerospace students to help; graduate students and university programming continuity to backup students; CySat now provides academic credit towards all majors making the program available university-wide \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Testing}
+CySat I will undergo multiple tests at each level of assembly. CySat currently researching locations to conduct the tests which can not be completed on the Iowa State campus. The testing regime identified for the mission has been described below.\\
+
+\noindent\textbf{Electrical:} Electrical tests will include a comprehensive performance test and limited performance test.  These ensure the hardware performs satisfactory at extreme values and will not degrade.  Additionally 1000 hours of operating time is needed, 200 hours in a vacuum.\\  
+
+\noindent\textbf{Thermal:} Thermal tests will include thermal vacuum, thermal balance with analysis, temperature humidity (habitable volumes), temperature humidity (transportation and storage) (test needed only if previous analysis dictates), leakage and thermal cycling, and an ambient pressure test is needed to prevent natural convection. These ensure the components can operate in a wide range of temperatures.\\ 
+
+\noindent\textbf{Structural:} The structural tests will include acceleration, static or vibration for load testing. The load needs to be 1.25x the limit load.  Additionally vibro-acoustic testing, random vibration testing and acoustic testing  are needed.  The random vibration testing requires a vibration fixture used by a flight type launch vehicle adapter. The final structural test the satellite will undergo are mechanical shock tests for external and induced shock, torque and force margin testing for mechanical movement, as well as a pressure test to simulate environment on ELV (Expendable Launch Vehicle).\\
+
+\noindent\textbf{Electromagnetic:} Electromagnetic tests will include conducted emissions, conducted susceptibility, radiated emissions, and radiated susceptibility requirements.  These are to ensure hardware functionality.\\
+
+\section{Schedule}
+CySat is currently aiming for a completed satellite by May 2018. To support this, the following schedule has been developed.
+\begin{table}[H]
+\centering
+\caption{CySat I Development Schedule}
+\begin{tabular}{| l | l | l |}
+\arrayrulecolor{white}
+\hline
+\rowcolor{gray!80}
+\textcolor{white}{\textbf{Task}} & \textcolor{white}{\textbf{Semester(s)}} & \textcolor{white}{\textbf{Dates}} \\ \hline
+\rowcolor{gray!10}
+Design Finalization & Fall 2016 - Spring 2017& August 22nd - May 6th  \\ \hline
+\rowcolor{gray!5}
+Fabrication & Spring - Fall 2017 & January 9th - December 16th  \\ \hline
+\rowcolor{gray!10}
+Testing & Spring 2018 & January 8th - May 5th   \\ \hline
+\rowcolor{gray!5}
+Delivery & Summer 2018 & May 15th \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Budget}
+\subsection{Funding Sources}
+CySat has been able to work with many organizations over the last year to secure sources of monetary funding and in-kind donations. The main suppliers of funding have been Iowa Space Grant Consortium, NASA JSC, Boeing, Rockwell Collins, and Iowa State University's Electrical Engineering and Aerospace Engineering departments. Through continued dialogue, funding has been guaranteed to continue through the next two years until satellite completion. CySat is also in the process of obtaining in-kind donations to minimize cost for testing the satellite structure and acquiring the Argus 1000 Spectrometer. The following budget has been developed as a conservative estimate of the total project cost.
+\subsection{Budget Component Breakdown}
+\begin{table}[H]
+\centering
+\caption{Budget Component Breakdown}
+\begin{tabular}{| l | p{5cm} | r |}
+\arrayrulecolor{white}
+\hline
+\rowcolor{gray!80}
+\textcolor{white}{\textbf{Subsystem}} & \textcolor{white}{\textbf{Item(s)}} &  \textcolor{white}{\textbf{Cost (\$)}} \\ \hline
+\rowcolor{gray!10}
+Structures & Manufacturing&1,000 \\
+\rowcolor{gray!10}
+ &Mounting hardware &500 \\ \hline
+\rowcolor{gray!5}
+Power & Electronic power system & 9,000\\
+\rowcolor{gray!5}
+& Solar array side panels &15,000 \\
+\rowcolor{gray!5}
+& Deployable solar array & 28,000\\ \hline
+\rowcolor{gray!10}
+Stabilization & Active stabilization&15,000 \\ 
+\rowcolor{gray!10}
+&Passive stabilization &7,000 \\ \hline
+\rowcolor{gray!5}
+C\&DH& Flight Computer &1,050\\
+\rowcolor{gray!5}
+& Radio board& 8,600\\ \hline
+\rowcolor{gray!10}
+Payload & CMR block I &2,500 \\ 
+\rowcolor{gray!10}
+& Argus 1000 spectrometer &50,000 \\
+\rowcolor{gray!10}
+& Payload antenna & 800\\\hline
+\rowcolor{gray!5}
+ &  & Total: 138,450\\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+\section{Conclusion}
+CySat plans to launch the first student built CubeSat from Iowa. CySat is working to establish a robust and modular platform for building low cost, low risk satellites on a short development timeline. The objective of CySat I's mission is a technology demonstration of the state-of-the-art communications and radar payload, the functionality of the satellite platform, and the satellites operational capabilities. CySat's mission will showcase the diverse range of applications for low-cost small satellites by demonstrating their usefulness for surveying asteroids. In addition to readying students for work in the space industry, CySat is also working to further scientific study by increasing access to small satellites for small businesses in Iowa and student organizations. Through collaborations, this project would allow any interested group to test their space bound equipment using CySat's CubeSat platform, before investing resources in a full sized satellite. By completing CySat I's mission, the CySat team will demonstrate that novel space missions are within scope of small businesses and universities and that CySat has the experience to service their missions.
+\newpage
+\section{Assessment}
+CySat is asking for a review of feasibility for the NASA-CSLI proposal. In the review, the feasibility, resiliency, risk, and the probability of success must be assessed to evaluate the technical implementation of the mission. The following questions have been drafted to help guide your analysis.\\
+\begin{itemize}
+\item[$\circ$]Is the CySat I mission feasible?\\
+\item[$\circ$]Do we posses the technical skills and knowledge required to complete CySat I?\\
+\item[$\circ$]Are we demonstrating our ability to develop, design, and implement novel space missions?\\
+\item[$\circ$]Have the mission's risks have been adequately identified and mitigated?\\
+\item[$\circ$]Have we developed a robust asteroid surveying payload?\\
+\item[$\circ$]Are we establishing precedents in the miniaturization of software defined radio and synthetic aperture radar?\\
+\item[$\circ$]Are we demonstrating our ability to develop components in-house?\\
+\item[$\circ$]Are we establishing precedents with what passive stabilization systems can be put into a miniature satellite?\\
+\item[$\circ$]Based on the technical feasibility of the mission, would you recommend that NASA provide a launch vehicle for CySat I?\\
+\end{itemize}
+\newpage
+
+\begin{thebibliography}{}
+
+\bibitem[Clyde Space]{Clyde Space} n.a., ``CS 3U Power Bundle B: EPS + 40Whr Battery,'' Clyde Space Ltd., 2016.
+
+\bibitem[Gilpin]{Gilpin} Gilpin, K., Knaian, A., Rus, D., ``Robot Pebbles: One Centimeter Modules for Programmable Matter through Self-Disassembly,'' Massachusetts Institute of Technology, 2011.
+
+\bibitem[Knaian]{Knaian} Knaian, A., ``Electropermanent Magnetic Connectors and Actuators: Devices and Their Application in Programmable Matter,'' Massachusetts Institute of Technology, 2010.
+
+\bibitem[NicaDrone]{NicaDrone} n.a., ``Electro Permanent Magnet EPM688-V2.0.,'' NicaDrone, n.d.
+
+\bibitem[Sinclair]{Sinclair} Sinclair, D., et al, ``Enabling Reaction Wheel Technology for High Performance Nanosatellite Attitude Control,'' 21st Annual AIAA/USU, 2007.
+
+\bibitem[Spectrolab]{Spectrolab} n.a.,``28.3\% Ultra Triple Junction (UTJ) Solar Cells,'' Spectrolab, Inc., 2010.
+
+\bibitem[Toth]{Toth} n.a., ``Argus 1000 IR Spectrometer Owner's Manual,'' OG728001, 2010.
+
+\bibitem[TrisolX]{TrisolX} n.a., ``TrisolX Solar Wings 28\% Efficient GaAs Triple Junction Solar Cells,'' TrisolX, 2015.
+
+\bibitem[Votel]{Votel} Votel, R.,`` Comparison of Control Moment Gyros and Reactions Wheels for Small Earth-Observing Satellites,''26th Annual AIAA/USU, 2012. 
+
+\end{thebibliography}
+
+
+
+
+
+
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

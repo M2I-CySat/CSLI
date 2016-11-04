@@ -1,0 +1,144 @@
+%  sample input file for using the CSLI.cls LaTeX class
+
+%  next 2 lines pull in the CSLI.cls file, put options between []
+\documentclass[]            % options: coveronly, nocover
+{CSLI}                       %   plus standard article class options
+
+
+\usepackage[
+bookmarks=true,
+bookmarksnumbered=false,  % true means bookmarks in
+% left window are numbered
+bookmarksopen=false,      % true means only level 1
+% are displayed.
+]{hyperref}
+
+\usepackage{multirow}
+\usepackage{titlesec}
+
+%\usepackage{standalone}
+
+
+
+\setcounter{secnumdepth}{4}
+
+%  Fill in the following catagories between the braces {}
+\title{CubeSat Launch Initiative}
+\Number{NNH16ZCQ002O}
+
+\abstract{Executive summary}   % suggested 200 words
+
+%%%Mission Parameters Table
+\Mission{CySat 1}
+\Mass{4.0 kg}
+\Size{3U}
+\Altitude{400 km}
+\Inclination{51.6 deg}
+\Min{250 km}
+\Max{485 km}
+\Acceptable{Yes}
+\Readinessdate{May 2018}
+\Life{3 Months}
+%%%Project Detail Table
+\Focus{Education}
+\Student{Yes}
+\NASAfunding{Yes}
+\NASAorg{NASA JSC}
+\Sponsor{Iowa State University}
+\Collaborator{None}
+\International{No}
+
+%points of contact
+\Namea{Mr. Peter Papadopoulos}
+\Titlea{Project Manager}
+\Phonea{(224) 616-0214}
+\Emaila{peterp@iastate.edu}
+\Nameb{Mr. Matthew Nelson}
+\Titleb{Academic Advisor}
+\Phoneb{(515) 451-4001}
+\Emailb{mnelson@iastate.edu}
+\Namec{Mr. Lee Graham}
+\Titlec{Technical Advisor}
+\Phonec{}
+\Emailc{lee.d.graham@nasa.gov}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\newpage
+\tableofcontents
+
+\pdfbookmark[2]{Contents}{table}
+
+
+\newpage
+\section{Proposal Detail}
+\subsection{Focus Area(s)}
+Education... krwjbfknwrgkbrw
+\subsection{Schedule}
+CySat is currently aiming for a completed satellite by May 2018. To support this, the following schedule has been developed.
+\begin{table}[H]
+\centering
+\caption{CySat I Development Schedule}
+\begin{tabular}{| l | l | l |}
+\arrayrulecolor{white}
+\hline
+\rowcolor{gray!80}
+\textcolor{white}{\textbf{Task}} & \textcolor{white}{\textbf{Semester(s)}} & \textcolor{white}{\textbf{Dates}} \\ \hline
+\rowcolor{gray!10}
+Design Finalization & Fall 2016 - Spring 2017& August 22nd - May 6th  \\ \hline
+\rowcolor{gray!5}
+Fabrication & Spring - Fall 2017 & January 9th - December 16th  \\ \hline
+\rowcolor{gray!10}
+Testing & Spring 2018 & January 8th - May 5th   \\ \hline
+\rowcolor{gray!5}
+Delivery & Summer 2018 & May 15th \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Merit Report Outcome}
+Merit review summary...
+\subsection{Feasibility Report Outcome}
+Feasibility review summary...
+\subsection{Requirements Compliance}
+Compliance...
+\subsection{Waivers}
+None?
+\subsection{Funding Commitment Letters}
+M:2:I, ISGC, Lee?
+
+\newpage
+\begin{thebibliography}{WoodTP}
+\bibitem[WoodTP]{woodTP} Wood, W.A., ``Multidimensional Upwind
+  Fluctuation Splitting Scheme with Mesh Adaption for Hypersonic Viscous
+  Flow,'' NASA/TP 2002-211640, Apr.~2002.
+\end{thebibliography}
+{\em Note that this entry is not necessarily in the correct NASA
+  format. Consult Technical Editing for correct reference format.}
+
+\newpage
+\appendix
+
+\Appendix{Merit Report}
+
+\includepdf[pages= {-} ]{merit.pdf}
+
+\newpage
+
+\Appendix{Feasibility Report}
+
+\includepdf[pages= {-} ]{feasibility.pdf}
+
+\newpage
+
+\Appendix{Resumes}
+Review committee member resumes
+
+\subsection{Resume 1}
+Reviewer Resume 1
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
