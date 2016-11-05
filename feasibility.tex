@@ -125,7 +125,7 @@ The power board selected was a Clyde Space CS 3U Power Bundle EPS with 10 watt-h
 
 
 
-The Spectrolab CIC photovoltaic cells selected for this spacecraft have been flight tested on numerous other CubeSat missions and have been incorporated into several commercially available arrays. The CIC cells have been widely available to the CubeSat community for several years and detailed documentation on their integration and space performance has been published. The TrisolX solar wings deliver high maximum power, high voltage at maximum power, and high efficiency values. Utilizing both the CIC and TrisolX cells in a hybrid solar array has allowed Cysat to be flexible in the placement of the antennas and diagnostic ports.
+The Spectrolab CIC photovoltaic cells selected for this spacecraft have been flight tested on numerous other CubeSat missions and have been incorporated into several commercially available arrays. The CIC cells have been widely available to the CubeSat community for several years and detailed documentation on their integration and space performance has been published. The TrisolX solar wings deliver high maximum power, high voltage at maximum power, and high efficiency values. Utilizing both the CIC and TrisolX cells in a hybrid solar array has allowed CySat to be flexible in the placement of the antennas and diagnostic ports.
 
 
 
@@ -230,7 +230,7 @@ CySat I will utilize a custom-designed solution for command and data handling (C
 \item MCU support passives
 \end{itemize}
 The CySat motherboard will be designed to be reusable, rather than mission specific.\\
-\\The second board is the Auxiliary Board (Aux Board), whcich will host:
+\\The second board is the Auxiliary Board (Aux Board), which will host:
 \begin{itemize}
 \item Antenna deployment control circuitry
 \item Stabilization/attitude control circuitry
@@ -259,7 +259,7 @@ The flexibility of the STM32 standard peripheral library allows for advanced low
 \paragraph{Radio Selection\\}
 For telemetry, command and control the Clyde Space CS-UVTRX- 01 was selected for simplicity as a COTS part with flight heritage as well as designed compatibility with the bus. This half duplex crossband VHF/VHF radio will enable the platform to act as an AMSAT (Amateur Radio Satellite) as well as minimizing equipment and expertise necessary for radio amateurs to track, receive, and decode beacon data. 
 \paragraph{Licensing and Frequency Coordination\\}
-The International Telecommunication Union (ITU) is the United Nations agency that oversees information and communications policies, and frequency allocations for amateur radio satellite communications ultimately fall under their purview. However, the International Amateur Radio Union (IARU) is the Sector Member of the ITU through which amateur radio satellite frequencies are coordinated. Once a launch date is scheduled, we will submit a proposal to the IARU stating the intent of the mission and desired frequency bands, whereupon we anticipate being assigned specific uplink and downlink frequencies. Frequency allocations for amateur satellite communications have been established in a range of frequency bands from the low end of the HF range well into the mm range. The objectives in selecting frequency bands for uplink and downlink are to minimize the technical requirements of the satellite and to maximize ease-of- use by ground personnel and amateur operators. With these goals in mind, we will request an uplink frequency in the VHF 2m band (144 - 146 MHz) and a downlink frequency in the UHF 70cm band (435 - 438 MHz). These two bands are desirable for their usability, since licensees may operate on either with only the lowest-level FCC-issued amateur radio license (i.e., Technician level) and equipment for operation on these bands is comparatively cheap and widely available. The 2m band was chosen for the uplink in part because this frequency allocation is narrower (2 MHz vs. 3 MHz in the 70cm band), and we anticipate needing less bandwidth for the uplink than the downlink given the nature of the information sent on each. In contrast, the 70cm band has several desirable characteristics for the downlink, such as the ability to use a smaller antenna for transmitting.
+The International Telecommunication Union (ITU) is the United Nations agency that oversees information and communications policies, and frequency allocations for amateur radio satellite communications ultimately fall under their purview. However, the International Amateur Radio Union (IARU) is the Sector Member of the ITU through which amateur radio satellite frequencies are coordinated. Once a launch date is scheduled, CySat will submit a proposal to the IARU stating the intent of the mission and desired frequency bands, whereupon CySat anticipates being assigned specific uplink and downlink frequencies. Frequency allocations for amateur satellite communications have been established in a range of frequency bands from the low end of the HF range well into the mm range. The objectives in selecting frequency bands for uplink and downlink are to minimize the technical requirements of the satellite and to maximize ease-of- use by ground personnel and amateur operators. With these goals in mind, CySat will request an uplink frequency in the VHF 2m band (144 - 146 MHz) and a downlink frequency in the UHF 70cm band (435 - 438 MHz). These two bands are desirable for their usability, since licensees may operate on either with only the lowest-level FCC-issued amateur radio license (i.e., Technician level) and equipment for operation on these bands is comparatively cheap and widely available. The 2m band was chosen for the uplink in part because this frequency allocation is narrower (2 MHz vs. 3 MHz in the 70cm band), and CySat anticipates needing less bandwidth for the uplink than the downlink given the nature of the information sent on each. In contrast, the 70cm band has several desirable characteristics for the downlink, such as the ability to use a smaller antenna for transmitting.
 
 \paragraph{Command and Control\\}
 
@@ -350,9 +350,9 @@ CySat I needs a minimum of 2 months of operational life to obtain enough data to
 \subsubsection{Cross Sectional Area}
 When calculating orbital decay times for a LEO orbit, atmospheric drag cannot be neglected. Since the satellite is moving through a fluid, it is vital to use the correct cross sectional area. Due to CySat 1 having active stabilization, the satellite will be traveling with its forward facing surface perpendicular to its motion meaning that the vertical cross sectional area can be used for the decay calculations. Since CySat is working with a 3U CubeSat, the dimensions will be 30cm x 10cm x 10cm, resulting in a vertical cross sectional area of 0.01m$^2$.
 \subsubsection{Atmospheric Drag}
-To accurately determine the orbital decay time, the satellites coefficient of drag was estimated. Based on research of cubes, cylinders, and prior CubeSats, we identified a range of drag coefficients between 0.8 and 2.2. A coefficient of drag of 0.82 corresponds to a long cylinder whereas a coefficient of 1.15 represents a short cylinder. A value of 2.2 was obtained from measurements of a typical spacecraft. Upon consideration, it was decided to use the average between all three listed coefficients which was 1.39. STAR-CCM+ will be used to calculate a more accurate coefficient of drag based on CySat I's specific geometry.
+To accurately determine the orbital decay time, the satellites coefficient of drag was estimated. Based on research of cubes, cylinders, and existing CubeSat missions, a range of drag coefficients between 0.8 and 2.2 were identified. A coefficient of drag of 0.82 corresponds to a long cylinder whereas a coefficient of 1.15 represents a short cylinder. A value of 2.2 was obtained from measurements of a typical spacecraft. Upon consideration, it was decided to use the average between all three listed coefficients which was 1.39. STAR-CCM+ will be used to calculate a more accurate coefficient of drag based on CySat I's specific geometry.
 \subsubsection{Atmospheric Model}
-There are multiple atmospheric models available, so a list of orbit lifetimes based on each model was compiled for comparison. Using Systems Tool Kit, we compared predictions from the following models: Jacchia 1970 Lifetime, NRLMSISE 2000, Jacchia 1971, and 1976 Standard. After analysis, we chose to base the orbital degradation predictions on the 1976 Standard model, which was the most conservative.
+There are multiple atmospheric models available, so a list of orbit lifetimes based on each model was compiled for comparison. Using Systems Tool Kit, the Mission Analysis Team compared predictions from the following models: Jacchia 1970 Lifetime, NRLMSISE 2000, Jacchia 1971, and 1976 Standard. After analysis, it was chosen to base the orbital degradation predictions on the 1976 Standard model, which was the most conservative.
 \subsection{Orbit Simulations}
 Mission Analysis performed multiple simulations in STK to find total orbital period as well as average communication times with the ground station in Ames, Iowa. In these simulations, different cross sectional areas, coefficients of drag, and atmospheric models were used as previously described. For the final analysis, a cross sectional area of 0.01m$^2$ and a coefficient of 1.39 were used. These parameters were compared against both the 1976 Standard and the NRLMSISE 2000 atmospheric models. The former model resulted in the shortest orbital periods across all calculations, while the latter resulted in the longest periods, giving a wide range of data to work with. These models were also tested at a number of different altitudes ranging from 250km to 485km.
 
@@ -502,13 +502,13 @@ CySat plans to launch the first student built CubeSat from Iowa. CySat is workin
 CySat is asking for a review of feasibility for the NASA-CSLI proposal. In the review, the feasibility, resiliency, risk, and the probability of success must be assessed to evaluate the technical implementation of the mission. The following questions have been drafted to help guide your analysis.\\
 \begin{itemize}
 \item[$\circ$]Is the CySat I mission feasible?\\
-\item[$\circ$]Do we posses the technical skills and knowledge required to complete CySat I?\\
-\item[$\circ$]Are we demonstrating our ability to develop, design, and implement novel space missions?\\
+\item[$\circ$]Does CySat posses the technical skills and knowledge required to complete CySat I?\\
+\item[$\circ$]Is CySat demonstrating its ability to develop, design, and implement novel space missions?\\
 \item[$\circ$]Have the mission's risks have been adequately identified and mitigated?\\
-\item[$\circ$]Have we developed a robust asteroid surveying payload?\\
-\item[$\circ$]Are we establishing precedents in the miniaturization of software defined radio and synthetic aperture radar?\\
-\item[$\circ$]Are we demonstrating our ability to develop components in-house?\\
-\item[$\circ$]Are we establishing precedents with what passive stabilization systems can be put into a miniature satellite?\\
+\item[$\circ$]Has CySat developed a robust asteroid surveying payload?\\
+\item[$\circ$]Is CySat establishing precedents in the miniaturization of software defined radio and synthetic aperture radar?\\
+\item[$\circ$]Is CySat demonstrating its ability to develop components in-house?\\
+\item[$\circ$]Is CySat establishing precedents with what passive stabilization systems can be put into a miniature satellite?\\
 \item[$\circ$]Based on the technical feasibility of the mission, would you recommend that NASA provide a launch vehicle for CySat I?\\
 \end{itemize}
 \newpage
