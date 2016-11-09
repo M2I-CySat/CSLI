@@ -75,8 +75,8 @@ The CubeSat team developed several design restrictions to guide and optimize the
 \section{Satellite Systems}
 \subsection{Structural Systems}
 \subsubsection{CubeSat Structure}
-The CySat team determined early on that developing a custom structure would be the most suitable option for the mission. This platform could address many of the design challenges of this mission. The largest design challenge that had to be addressed was accommodation of the payload into the satellite. Previous iterations of the design utilized a commercially available 3U Pumpkin Kit, but the team has determined that a custom configuration will be more effective to accomplish the mission.\\
-\indent This configuration will be designed to meet the structural standards set out by the CubeSat guidelines from California Polytechnic State University. The structure will be made mostly aluminum alloy that will be CNC milled to the required dimensions. Solar panels will be placed on the outside of the structure with all internal hardware placed inside of the structure separated by rods, spacers, and standoffs. The top panel will also be placed at a to be determined angle inward less than 45 degrees in order to meet the requirements of the payload. This is done in order to create more useable area to capture a return signal off of the payload. All of this information is preliminary design and is subject to change depending on payload requirements.
+The CySat team determined early on that developing a custom structure would be the most suitable option for the mission. This platform could address many of the design challenges of this mission. The largest design challenge that had to be addressed was accommodation of the payload into the satellite. Previous iterations of the design utilized a commercially available 3U Pumpkin Kit, but the team has determined that a custom structure will be more effective to accomplish the mission.\\
+\indent This structure will be designed to meet the structural standards set out by the CubeSat guidelines from California Polytechnic State University. The structure will be made mostly aluminum alloy that will be CNC milled to the required dimensions. Solar panels will be placed on the outside of the structure with all internal hardware placed inside of the structure separated by rods, spacers, and standoffs. The top panel will also be placed at a to be determined angle inward less than 45 degrees in order to meet the requirements of the payload. This is done in order to create more useable area to capture a return signal off of the payload. All of this information is preliminary design and is subject to change depending on payload requirements.
 
 \paragraph{Solar Arrays\\}
 The solar arrays will act as a mounting point and substrate for the photovoltaic cells and communications antennas. Consisting of six hard mounted panels and four deployable panels, the array will be configured to ensure optimal power delivery and minimal interference between the antenna system and P-POD. A Clyde Space deployable array will be used to increase exposed solar cell area and generate power for the payload and stabilizations systems. Two options exist for Clyde Space deployable arrays: Single, Short Edge; and Double, Long Edge. Both options are still being considered.
@@ -93,6 +93,20 @@ CySat has selected a hybrid solar cell arrangement due to the need for flexible 
 Wrapping of the antenna elements will not interfere with the rails of the P-POD or the diagnostics. This mounting will be secured to the solar array using bolts that will also keep the antennas from moving side to side. The mountings will also add a 15$^\circ$ takeoff angle to the center mounted UHF transmission elements to form a bent dipole. The antennas will then be wrapped around the satellite and held in place with ultra-high-molecular-weight polyethylene (also known as Spectra) fishing wire tied around a nichrome filament until deployment. The antennas will be mounted on the bottom panel of the satellite, and the antennas will be wrapped up toward the top of the satellite with the burner circuits on the front and back panel. A diagram of this system can be seen in Figure 1.
 
 The burner circuit will consist of a constant current source supplying approximately 0.5 amps to a 1 cm length of nichrome filament. This filament will have the spectra wire wrapped around it, causing the antenna to break away once the nichrome has reached the melting point of the spectra wire. This configuration has been successfully fabricated and tested on hardware before with successful deployment of the antenna system.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{\textwidth}
+\includegraphics[width=\textwidth]{Stowed}
+\caption{Stowed configuration.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{\textwidth}
+\includegraphics[width=\textwidth]{Deployed}
+\caption{Deployed configuration.}
+\end{subfigure}
+\caption{Conceptual drawings of CySat I in it's two configurations.}
+\end{figure}
 
 \subsection{Electrical Systems}
 \subsubsection{Power Systems}
@@ -497,7 +511,7 @@ Payload & CMR block I &2,500 \\
 
 \newpage
 \section{Conclusion}
-CySat plans to launch the first student built CubeSat from Iowa. CySat is working to establish a robust and modular platform for building low cost, low risk satellites on a short development timeline. The objective of CySat I's mission is a technology demonstration of the state-of-the-art communications and radar payload, the functionality of the satellite platform, and the satellite's operational capabilities. CySat's mission will showcase the diverse range of applications for low-cost small satellites by demonstrating their usefulness for surveying asteroids. In addition to readying students for work in the space industry, CySat is also working to further scientific study by increasing access to small satellites for small businesses in Iowa and student organizations. Through collaborations, this project would allow any interested group to test their space bound equipment using CySat's CubeSat platform, before investing resources in a full sized satellite. By completing CySat I's mission, the CySat team will obtain valuable flight heritage for the CySat I Platform and demonstrate that novel space missions are within scope of small businesses and universities.
+CySat plans to launch the first student built CubeSat from Iowa. CySat is working to establish a robust and modular platform for building low cost, low risk satellites on a short development timeline. The objective of CySat I's mission is a technology demonstration of the state-of-the-art communications and radar payload, the functionality of the satellite platform, and the satellite's operational capabilities. CySat's mission will showcase the diverse range of applications for low-cost small satellites by demonstrating their usefulness for surveying asteroids. In addition to readying students for work in the space industry, CySat is also working to further scientific study by increasing access to space for small businesses in Iowa and student organizations. Through collaborations, this project would allow any interested group to test their space bound equipment using CySat's CubeSat platform, before investing resources in a full sized satellite. By completing CySat I's mission, the CySat team will obtain valuable flight heritage for the CySat I Platform and demonstrate that novel space missions are within scope of small businesses and universities.
 \newpage
 \section{Assessment}
 CySat is asking for a review of feasibility for the NASA-CSLI proposal. In the review, the feasibility, resiliency, risk, and the probability of success must be assessed to evaluate the technical implementation of the mission. The following questions have been drafted to help guide your analysis.\\
@@ -524,6 +538,8 @@ CySat is asking for a review of feasibility for the NASA-CSLI proposal. In the r
 
 \bibitem[Knaian]{Knaian} Knaian, A., ``Electropermanent Magnetic Connectors and Actuators: Devices and Their Application in Programmable Matter,'' Massachusetts Institute of Technology, 2010.
 
+\bibitem[Murchie]{Murchie} Murchie, S., et al, ``Compact Reconnaissance Imaging Spectrometer for Mars (CRISM) on Mars Reconnaissance Orbiter (MRO),'' Journal of Geophysical Research,  2007.
+
 \bibitem[NicaDrone]{NicaDrone} n.a., ``Electro Permanent Magnet EPM688-V2.0.,'' NicaDrone, n.d.
 
 \bibitem[Sinclair]{Sinclair} Sinclair, D., et al, ``Enabling Reaction Wheel Technology for High Performance Nanosatellite Attitude Control,'' 21st Annual AIAA/USU, 2007.
@@ -536,8 +552,6 @@ CySat is asking for a review of feasibility for the NASA-CSLI proposal. In the r
 
 \bibitem[Votel]{Votel} Votel, R.,`` Comparison of Control Moment Gyros and Reactions Wheels for Small Earth-Observing Satellites,'' 26th Annual AIAA/USU, 2012.
 
-
-\bibitem[Murchie]{Murchie} Murchie, S., et al, ``Compact Reconnaissance Imaging Spectrometer for Mars (CRISM) on Mars Reconnaissance Orbiter (MRO),'' Journal of Geophysical Research,  2007.
 
 \end{thebibliography}
 
