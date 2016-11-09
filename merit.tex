@@ -48,7 +48,7 @@ CySat falls under the umbrella of Iowa State's College of Engineering Make to In
 CySat is provided a faculty academic advisor by M:2:I and has acquired the assistance of three technical advisors, one at NASA's Johnson Space Center and two at Boeing. CySat is student run and composed of six individual teams that each focus on a specific subsystem of the satellite. CySat has developed this project structure to increase the efficiency of the teams design process and provide members with an authentic representation of space missions in industry.
 
 \subsubsection{Project Goals}
-The overall goals for CySat have been the driving force behind all design considerations and operational plans. The following were developed jointly between CySat and the team's academic advisors. 
+The overall goals for CySat have been the driving force behind all design considerations and operational plans. The following were developed jointly between CySat and the team's academic advisors.
 \begin{enumerate}
 \item Serve as a catalyst for the small satellite program at Iowa State University
 \item Develop a baseline, modular design for future CubeSat missions
@@ -68,20 +68,20 @@ level distance=60pt}
 
 
 \begin{tikzpicture}[every tree node/.style={align=center}]
-\Tree 
+\Tree
  [ .{\colorbox{gray!80}{\makebox(50,30){\parbox{4em}{\centering\scriptsize\textcolor{white}{\textbf{Project\\Lead}}}}}}
      [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Structures Team Lead} }}}
        [ .{\colorbox{gray!5}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Structures Team}}}} ]]
-     [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Power Team Lead}}}} 
+     [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Power Team Lead}}}}
        [ .{\colorbox{gray!5}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Power Team}}}} ]]
      [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Propulsion Team Lead}}}}
        [ .{\colorbox{gray!5}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Propulsion Team}}}} ]]
      [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize C\&DH Team Lead}}}}
        [ .{\colorbox{gray!5}{\makebox(50,30){\parbox{4em}{\centering\scriptsize C\&DH Team}}}} ] ]
-     [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Mission Analysis Team Lead}}}} 
+     [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Mission Analysis Team Lead}}}}
        [ .{\colorbox{gray!5}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Mission Analysis Team}}}} ]]
-     [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Payload Team Lead}}}} 
-       [ .{\colorbox{gray!5}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Payload Team}}}} ]]] 
+     [ .{\colorbox{gray!10}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Payload Team Lead}}}}
+       [ .{\colorbox{gray!5}{\makebox(50,30){\parbox{4em}{\centering\scriptsize Payload Team}}}} ]]]
 \end{tikzpicture}
 \caption{CySat Team Hierarchy}
 \end{figure}
@@ -89,7 +89,7 @@ level distance=60pt}
 \textbf{Structures Team:}\\
 The Structures Team is responsible for the structural design of the satellite. The team is working with computer aided design (CAD) software in order to model the satellite's configurations. Structures is designing mechanical testing procedures and will oversee the satellite's integration in order to  ensure it is compliant with the structural design.\\\\
 \textbf{Power Team:}\\
-The Power Team controls power generation, storage, and management for the satellite. The Power Team is currently finalizing the design of the solar arrays, and assisting the Propulsion Team in the implementation of stabilization.\\\\ 
+The Power Team controls power generation, storage, and management for the satellite. The Power Team is currently finalizing the design of the solar arrays, and assisting the Propulsion Team in the implementation of stabilization.\\\\
 \textbf{Propulsion Team:}\\
 The Propulsion Team is currently performing research to find the ideal propulsion system to use for future asteroid missions. With current information, the team is focusing on electric engines and cold gas thrusters. Propulsion is also assisting Power in the implementation of stabilization.\\\\
 \textbf{Communications \& Data Handling Team (C\&DH):}\\
@@ -105,15 +105,15 @@ CySat's current primary scientific objective is to demonstrate that CubeSats can
 \section{Design Factors}
 Because of the recent surge in private industry support for CubeSats, CySat has been able to capitalize on recent commercial off-the-shelf (COTS) components to minimize design time and risk. The design team focused on COTS components due to several factors: flight heritage, short development time, and out of box functionality. Key components will be purchased commercially to decrease risk while some electronics will be developed in-house to increase efficiency. This system has allowed CySat to develop complex mission specific components in-house due to the increased flexibility of the commercial systems.
 \subsection{Satellite Component Evaluation Criteria}
-\textbf{Mass:} Pursuant to CubeSat specifications, special considerations were made to select and design components that would keep the system under the 4.0 Kg mass requirement.\\ 
+\textbf{Mass:} Pursuant to CubeSat specifications, special considerations were made to select and design components that would keep the system under the 4.0 Kg mass requirement.\\
 \\\textbf{Volume:} Ensuring that components would not consume too much of the 10 x 10 x 30 cm cube, and building in allowances for a diverse range of mission specific payloads. \\
 \\\textbf{Cost:} Due to the current fiscal situations of most state funded institutions, some high dollar amount components will be fabricated in house. \\
-\\\textbf{Flight Heritage:} Knowing that components had successfully worked in the space environment was of great importance. This can be seen with the selection of COTS components.\\ 
+\\\textbf{Flight Heritage:} Knowing that components had successfully worked in the space environment was of great importance. This can be seen with the selection of COTS components.\\
 \subsection{Design Restrictions}
-The CubeSat team developed several design restrictions to guide and optimize the design early on. Since the payload will require substantial resources from the spacecraft, the design goal was to provide a robust platform with enough features to allow the spacecraft to operate beyond LEO. This strategy has produced a satellite platform which can be easily adapted for future collaborations with small businesses and other universities. 
+The CubeSat team developed several design restrictions to guide and optimize the design early on. Since the payload will require substantial resources from the spacecraft, the design goal was to provide a robust platform with enough features to allow the spacecraft to operate beyond LEO. This strategy has produced a satellite platform which can be easily adapted for future collaborations with small businesses and other universities.
 \begin{enumerate}
 \item The spacecraft shall conform to the 3U CubeSat standard
-\item Spacecraft subsystems should be as simplistic as possible to reduce failure points 
+\item Spacecraft subsystems should be as simplistic as possible to reduce failure points
 \item Non-deployable solar arrays will be manufactured in house due to design needs and cost restrictions
 \item COTS components will be used when possible to limit risk. Custom, mission optimized, electronics will be designed to increase efficiency
 \end{enumerate}
@@ -180,7 +180,7 @@ Power & Electronic power system & 9,000\\
 \rowcolor{gray!5}
 & Deployable solar array & 28,000\\ \hline
 \rowcolor{gray!10}
-Stabilization & Active stabilization&15,000 \\ 
+Stabilization & Active stabilization&15,000 \\
 \rowcolor{gray!10}
 &Passive stabilization &7,000 \\ \hline
 \rowcolor{gray!5}
@@ -188,7 +188,7 @@ C\&DH& Flight Computer &1,050\\
 \rowcolor{gray!5}
 & Radio board& 8,600\\ \hline
 \rowcolor{gray!10}
-Payload & CMR block I &2,500 \\ 
+Payload & CMR block I &2,500 \\
 \rowcolor{gray!10}
 & Argus 1000 spectrometer &50,000 \\
 \rowcolor{gray!10}
@@ -214,14 +214,14 @@ CySat's educational and mission objectives align with multiple NASA Strategic Go
 Optimize Agency technology investments, foster open innovation, and facilitate technology infusion, ensuring the greatest national benefit.\\ \hline
 \end{tabular}
 \end{table}
-CySat has a history of collaboration and technology transfer and all of CySat's Designs will be made publicly available after successful completion of the mission. CySat is currently collaborating with other projects at Iowa Sate such as the M:2:I High Altitude Balloon Experiments in Technology team (HABET), to perform high altitude balloon tests for payload components, and with the Caterpillar \& Iowa State Space Mining Operation (CISSMO), a project which could realistically benefit from CySat's asteroid surveying mission. In the past, CySat has collaborated with Softronics Ltd. and the University of North Dakota on two different past projects. CySat completed the design of a 1U CubeSat platform which was adapted for the two different outsourced payloads. Neither satellite flew as neither payload was completed. CySat plans to return to this collaborative mission model after completing the 3U CubeSat platform and acquiring flight heritage. CySat hopes to encourage involvement in the space industry by providing a robust and adaptable space vehicle platform for scientific payloads developed by small business and universities.\\  
-\indent CySat has focused on delivering the following benefits to encourage involvement and innovation in the space industry and facilitate technology transfer: 
+CySat has a history of collaboration and technology transfer and all of CySat's Designs will be made publicly available after successful completion of the mission. CySat is currently collaborating with other projects at Iowa Sate such as the M:2:I High Altitude Balloon Experiments in Technology team (HABET), to perform high altitude balloon tests for payload components, and with the Caterpillar \& Iowa State Space Mining Operation (CISSMO), a project which could realistically benefit from CySat's asteroid surveying mission. In the past, CySat has collaborated with Softronics Ltd. and the University of North Dakota on two different past projects. CySat completed the design of a 1U CubeSat platform which was adapted for the two different outsourced payloads. Neither satellite flew as neither payload was completed. CySat plans to return to this collaborative mission model after completing the 3U CubeSat platform and acquiring flight heritage. CySat hopes to encourage involvement in the space industry by providing a robust and adaptable space vehicle platform for scientific payloads developed by small business and universities.\\
+\indent CySat has focused on delivering the following benefits to encourage involvement and innovation in the space industry and facilitate technology transfer:
 \begin{enumerate}
 \item{Developing relationships and fostering collaborations in industry and academia}
 \item{Sharing research, designs, and information with the public to benefit the scientific and small satellite communities}
 \item{Development of an adaptable 3U CubSat platform for providing space vehicle services for innovative outsourced missions}
 \item{Completion of an asteroid surveying payload to help support space mining efforts and advance the developments of software defined radar for space applications}
-\end{enumerate} 
+\end{enumerate}
 
 \subsubsection{Objective 2.4}
 
@@ -257,7 +257,7 @@ As described in section 6.1.1, CySat has a long history of collaboration. CySat 
 \rowcolor{gray!10}
 Provide opportunities for groups of post-secondary students to engage in authentic NASA-related mission-based research and development activities.\\ \hline
 \end{tabular}
-\end{table} 
+\end{table}
 
 \begin{table}[H]
 \centering
@@ -269,7 +269,7 @@ Provide opportunities for groups of post-secondary students to engage in authent
 \rowcolor{gray!10}
 Develop NASA-related course resources for integration into STEM disciplines.\\ \hline
 \end{tabular}
-\end{table} 
+\end{table}
 
 \begin{table}[H]
 \centering
@@ -281,7 +281,7 @@ Develop NASA-related course resources for integration into STEM disciplines.\\ \
 \rowcolor{gray!10}
 Improve the ability of targeted institutions to compete for NASA research and development work.\\ \hline
 \end{tabular}
-\end{table}  
+\end{table}
 
 As stated in section 6.1.2, CySat's mission and systems are directly related to NASA's missions. CySat is working closely with NASA and is dependent on NASA resources to accomplish it's missions. Since CySat is a part of the M:2:I organization, students receive credit towards graduation for their contributions.  CySat provides a course option at Iowa State which is fundamentally related to NASA. CySat is preparing to take part in NASA's Cube Quest Challenge to secure a launch for CySat 2, the planned asteroid or lunar surveying mission which will begin after completion of CySat I. By applying for these initiatives and challenges, CySat's members gain experience delivering work which meets NASA's high standards of technical excellence. Acquiring successful flight heritage with CySat I will greatly improve CySat's likelihood of securing launch vehicles for future missions. By giving members access to NASA employees and other industry contacts, CySat enables students to build and expand their professional networks. CySat's project structure has been designed to give students an authentic industry experience by working on a project consisting of multidisciplinary teams and collaborating with NASA, private companies and other educational institutions. The unique experience members of CySat gain helps better prepare them for working in industry or with NASA.
 
@@ -293,7 +293,7 @@ CySat has identified the following benefits which enable students to receive an 
 \item{Gives students experience preparing technical and scientific reports for NASA research and development}
 \item{Expose students to collaborative mission models and teach them to manage professional relationships}
 \item{Foster an interdisciplinary environment within the College of Engineering at Iowa State University which gives students an authentic representation of space missions in industry}
-\end{enumerate} 
+\end{enumerate}
 
 
 \newpage
@@ -323,7 +323,7 @@ CySat is asking for a review of merit for the NASA-CSLI proposal. In the review,
 
 \end{document}
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
-%%% End: 
+%%% End:
